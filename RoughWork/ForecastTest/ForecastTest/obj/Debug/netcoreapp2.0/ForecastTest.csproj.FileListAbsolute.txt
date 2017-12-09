@@ -1,0 +1,11 @@
+c:\users\richard\source\repos\ForecastTest\ForecastTest\bin\Debug\netcoreapp2.0\ForecastTest.deps.json
+c:\users\richard\source\repos\ForecastTest\ForecastTest\bin\Debug\netcoreapp2.0\ForecastTest.runtimeconfig.json
+c:\users\richard\source\repos\ForecastTest\ForecastTest\bin\Debug\netcoreapp2.0\ForecastTest.runtimeconfig.dev.json
+c:\users\richard\source\repos\ForecastTest\ForecastTest\bin\Debug\netcoreapp2.0\ForecastTest.dll
+c:\users\richard\source\repos\ForecastTest\ForecastTest\obj\Debug\netcoreapp2.0\ForecastTest.csproj.CoreCompileInputs.cache
+c:\users\richard\source\repos\ForecastTest\ForecastTest\obj\Debug\netcoreapp2.0\ForecastTest.AssemblyInfoInputs.cache
+c:\users\richard\source\repos\ForecastTest\ForecastTest\obj\Debug\netcoreapp2.0\ForecastTest.AssemblyInfo.cs
+c:\users\richard\source\repos\ForecastTest\ForecastTest\bin\Debug\netcoreapp2.0\ForecastTest.pdb
+c:\users\richard\source\repos\ForecastTest\ForecastTest\obj\Debug\netcoreapp2.0\ForecastTest.dll
+c:\users\richard\source\repos\ForecastTest\ForecastTest\obj\Debug\netcoreapp2.0\ForecastTest.pdb
+c:\users\richard\source\repos\ForecastTest\ForecastTest\obj\Debug\netcoreapp2.0\ForecastTest.csprojResolveAssemblyReference.cache
