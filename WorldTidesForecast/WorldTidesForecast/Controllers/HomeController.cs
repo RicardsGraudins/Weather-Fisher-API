@@ -24,6 +24,7 @@ namespace WorldTidesForecast.Controllers
             stream1.Position = 0;
             StreamReader sr = new StreamReader(stream1);
 
+            //Display JSON
             ViewBag.json = sr.ReadToEnd();
             return View();
         }//Index

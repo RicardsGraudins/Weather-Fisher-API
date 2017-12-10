@@ -216,6 +216,35 @@ namespace WorldTidesForecast.Models
             lon = -6.36;
             RootObjectExtreme Wicklow = await WorldTidesExtremeService.GetMaxMinTides(lat, lon);
 
+            //Setting county names - used as unique key in database
+            Carlow.county = "Carlow";
+            Cavan.county = "Cavan";
+            Clare.county = "Clare";
+            Cork.county = "Cork";
+            Donegal.county = "Donegal";
+            Dublin.county = "Dublin";
+            Galway.county = "Galway";
+            Kerry.county = "Kerry";
+            Kildare.county = "Kildare";
+            Kilkenny.county = "Kilkenny";
+            Laois.county = "Laois";
+            Leitrim.county = "Leitrim";
+            Limerick.county = "Limerick";
+            Longford.county = "Longford";
+            Louth.county = "Louth";
+            Mayo.county = "Mayo";
+            Meath.county = "Meath";
+            Monaghan.county = "Monaghan";
+            Offaly.county = "Offaly";
+            Roscommon.county = "Roscommon";
+            Sligo.county = "Sligo";
+            Tipperary.county = "Tipperary";
+            Waterford.county = "Waterford";
+            Westmeath.county = "Westmeath";
+            Wexford.county = "Wexford";
+            Wicklow.county = "Wicklow";
+
+
             //Creating documents for each county
             await this.CreateTideEntryIfNotExists("TidesDB", "Tides", Carlow);
             await this.CreateTideEntryIfNotExists("TidesDB", "Tides", Cavan);

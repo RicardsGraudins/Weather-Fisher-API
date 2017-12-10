@@ -13,7 +13,7 @@ namespace WorldTidesForecast.Models
         public async static Task<RootObjectExtreme> GetMaxMinTides(double lat, double lon)
         {
             var http = new HttpClient();
-            var url = String.Format("https://www.worldtides.info/api?extremes&lat={0}&lon={1}&key=fc4813c4-07c1-4437-bb20-2a10f8c4fba0", lat, lon);
+            var url = String.Format("https://www.worldtides.info/api?extremes&lat={0}&lon={1}&key=834b4e65-cfde-40f8-aa73-00f3ea7fbc40", lat, lon);
             var response = await http.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(RootObjectExtreme));

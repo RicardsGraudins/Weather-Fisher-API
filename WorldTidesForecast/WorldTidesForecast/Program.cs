@@ -20,6 +20,7 @@ namespace WorldTidesForecast
             myTimer.Interval = 10800000;
             //And start it        
             myTimer.Enabled = true;
+
             BuildWebHost(args).Run();
         }//Main
 
