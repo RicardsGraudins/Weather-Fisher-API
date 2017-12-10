@@ -18,6 +18,8 @@ namespace WorldTidesForecast.Models
         //Creating document
         public async Task CreateTideEntryIfNotExists(string databaseName, string collectionName, RootObjectExtreme tideObject)
         {
+            this.client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
+
             try
             {
                 await this.client.ReadDocumentAsync(UriFactory.CreateDocumentUri(databaseName, collectionName, tideObject.county));
@@ -38,12 +40,15 @@ namespace WorldTidesForecast.Models
         //Delete the database
         public async void DeleteDatabase(string databaseName)
         {
+            this.client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
             await this.client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(databaseName));
         }//DeleteDatabase
 
         //Executing query - checking if the document exists in the database
         public void ExecuteQuery(string databaseName, string collectionName, string county)
         {
+            this.client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
+
             //Set some common query options
             FeedOptions queryOptions = new FeedOptions { MaxItemCount = -1 };
 
@@ -75,6 +80,8 @@ namespace WorldTidesForecast.Models
         //Executing query & returning RootObjectExtreme object
         public RootObjectExtreme ExecuteQueryReturnObject(string databaseName, string collectionName, string county)
         {
+            this.client = new DocumentClient(new Uri(EndpointUrl), PrimaryKey);
+
             //Set some common query options
             FeedOptions queryOptions = new FeedOptions { MaxItemCount = -1 };
 

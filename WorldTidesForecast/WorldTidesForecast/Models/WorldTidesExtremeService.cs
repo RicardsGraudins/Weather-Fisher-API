@@ -1,6 +1,4 @@
-﻿using Microsoft.Azure.Documents;
-using Microsoft.Azure.Documents.Client;
-using System;
+﻿using System;
 using System.IO;
 using System.Net.Http;
 using System.Runtime.Serialization.Json;

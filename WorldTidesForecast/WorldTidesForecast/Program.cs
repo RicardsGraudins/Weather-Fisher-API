@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using System.Timers;
 using WorldTidesForecast.Models;
 
@@ -22,7 +15,7 @@ namespace WorldTidesForecast
             //Create a timer
             Timer myTimer = new System.Timers.Timer();
             //Tell the timer what to do when it elapses
-            myTimer.Elapsed += new ElapsedEventHandler(myEvent);
+            myTimer.Elapsed += new ElapsedEventHandler(DBUpdate);
             //Set it to go off every 3 hours
             myTimer.Interval = 10800000;
             //And start it        
@@ -30,13 +23,29 @@ namespace WorldTidesForecast
             BuildWebHost(args).Run();
         }//Main
 
-        public static async void myEvent(object source, ElapsedEventArgs e)
+        public static async void DBUpdate(object source, ElapsedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Updating...");
             //Delete the db
-            dbService.DeleteDatabase("TidesDB");
+            try
+            {
+                dbService.DeleteDatabase("TidesDB");
+                //sleep for 10 seconds
+                System.Threading.Thread.Sleep(10000);
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("Error @ DeleteDatabase");
+            }
             //Create the db & documents for each county
-            await dbService.CreateDocuments();
+            try
+            {
+                await dbService.CreateDocuments();
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("Error @ CreateDocuments");
+            }
         }//myEvent
 
         public static IWebHost BuildWebHost(string[] args) =>
