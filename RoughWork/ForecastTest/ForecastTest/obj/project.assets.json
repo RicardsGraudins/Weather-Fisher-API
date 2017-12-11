@@ -5563,11 +5563,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Richard\\source\\repos\\ForecastTest\\ForecastTest\\ForecastTest.csproj",
+      "projectUniqueName": "C:\\Users\\Richard\\Desktop\\Weather Fisher API\\RoughWork\\ForecastTest\\ForecastTest\\ForecastTest.csproj",
       "projectName": "ForecastTest",
-      "projectPath": "C:\\Users\\Richard\\source\\repos\\ForecastTest\\ForecastTest\\ForecastTest.csproj",
+      "projectPath": "C:\\Users\\Richard\\Desktop\\Weather Fisher API\\RoughWork\\ForecastTest\\ForecastTest\\ForecastTest.csproj",
       "packagesPath": "C:\\Users\\Richard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Richard\\source\\repos\\ForecastTest\\ForecastTest\\obj\\",
+      "outputPath": "C:\\Users\\Richard\\Desktop\\Weather Fisher API\\RoughWork\\ForecastTest\\ForecastTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

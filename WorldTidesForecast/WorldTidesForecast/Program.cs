@@ -16,8 +16,8 @@ namespace WorldTidesForecast
             Timer myTimer = new System.Timers.Timer();
             //Tell the timer what to do when it elapses
             myTimer.Elapsed += new ElapsedEventHandler(DBUpdate);
-            //Set it to go off every 3 hours
-            myTimer.Interval = 10800000;
+            //Set it to go off every 5 hours
+            myTimer.Interval = 18000000;
             //And start it        
             myTimer.Enabled = true;
 
